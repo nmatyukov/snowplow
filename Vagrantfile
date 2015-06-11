@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize [ "guestproperty", "set", :id, "--timesync-threshold", 10000 ]
     # Scala is memory-hungry
-    vb.memory = 5120
+    vb.memory = 1024
   end
 
   config.vm.provision :shell do |sh|
